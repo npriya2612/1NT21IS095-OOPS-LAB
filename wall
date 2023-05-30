@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+class Wall{
+    private:
+        double length,breadth;
+    public:
+    Wall(double x, double y)
+    { 
+        length=x;
+        breadth=y;
+    }
+    void area()
+    {   cout<<"The area of the wall is"<<length*breadth<<"\n"; 
+        
+    }
+};
+int main()
+{
+    Wall obj(10,20);
+    obj.area();
+    Wall obj2(20,30);
+    obj2.area();
+}
+    
