@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+class A
+{
+	int x,y,z;
+	public:
+		void input()
+		{
+			cout<<"enter 3 numbers\n";	
+			cin>>x>>y>>z;
+		}
+		friend class B;
+};
+
+class B
+{	
+	int largest;
+	public:
+	 	int cmp(A obj)
+		{
+		if(obj.x>obj.y&&obj.x>obj.z)
+		return(obj.x);
+		else if(obj.y>obj.z)
+		return(obj.y);
+		else
+		return(obj.z);
+		}	
+};	
+
+int main()
+{
+	A obj1;
+	B obj2;
+	obj1.input();
+	obj2.cmp(obj1);
+	cout<<obj2.cmp(obj1)<<" is larger "<<endl;
+	return 0;
+}
